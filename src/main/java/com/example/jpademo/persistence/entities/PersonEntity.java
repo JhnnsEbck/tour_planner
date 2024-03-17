@@ -3,6 +3,9 @@ package com.example.jpademo.persistence.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 @Entity
 @Table(name = "PERSON")
 @Data
@@ -17,7 +20,8 @@ public class PersonEntity {
 
     private String name;
     @Column(name = "E_MAIL")
-private String email;
+    private String email;
     private int age;
+
 
 }

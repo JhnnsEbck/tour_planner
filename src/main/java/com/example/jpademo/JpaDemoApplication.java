@@ -6,6 +6,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootApplication
 public class JpaDemoApplication {
@@ -17,7 +18,8 @@ public class JpaDemoApplication {
         SpringApplication.run(JpaDemoApplication.class, args);
     }
 
-    @PostConstruct
+
+
     void initFakeData() {
         PersonEntity p = PersonEntity.builder()
                 .name("Markus")
